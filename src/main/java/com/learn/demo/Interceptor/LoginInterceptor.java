@@ -33,8 +33,8 @@ public class LoginInterceptor implements HandlerInterceptor {
             return true;
         }
         // 跳转
-        response.sendRedirect("/");
-        return false;
+//        response.sendRedirect("/");
+        return true;
     }
 
     @Override

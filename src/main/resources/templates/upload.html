@@ -6,11 +6,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .form {
+            display:grid;
+            grid-template-columns:240px;
+            grid-template-rows:1fr 1fr 1fr 1fr;
+        }
+        .form-item{
+            margin-bottom:20px;
+        }
+    </style>
 </head>
 <body>
     <div>
         <h1>上传文件</h1>
-        <input type="file">
+        <form class="form" action="/upload" method="post" enctype="multipart/form-data">
+            <label class="form-item">emial <input type="email" name="email"></label>
+            <label class="form-item">username <input type="text" name="username"></label>
+            <label class="form-item">单文件<input type="file" name="headerImg"></label>
+            <label class="form-item">多文件<input type="file" name="photos" multiple></label>
+            <input type="submit" class="form-item">
+        </form>
     </div>
 </body>
 </html>
